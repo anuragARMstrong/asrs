@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Swal from "sweetalert2";
 import { BallTriangle } from "react-loader-spinner";
 import "./App.css";
+import Navbar from "./components/Navbar";
+import Barcode from "./components/Barcode";
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class App extends Component {
@@ -12,8 +14,19 @@ class App extends Component {
       palletId: null,
       success: false,
       loader: false,
+      route: "home",
     };
   }
+
+  onRouteChange = (route) => {
+    if (route === "barcode") {
+      this.setState({ route: "barcode" });
+    } else if (route === "home") {
+      this.setState({ route: "home" });
+    } else {
+      this.setState({ route: "home" });
+    }
+  };
 
   handleForm = async (e) => {
     try {
@@ -100,54 +113,60 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App center">
-        <div
-          style={{
-            background: "white",
-            width: "auto",
-            padding: "50px",
-            marginTop: "50px",
-            borderRadius: "5px",
-          }}
-        >
-          <h1>Store In : acknowledge</h1>
-          {this.state.loader ? (
-            <div className="center">
-              <h5>Pallet {this.state.palletId} is being processed...</h5>
-              <BallTriangle
-                heigth="100"
-                width="100"
-                color="orange"
-                ariaLabel="loading"
-              />
-            </div>
-          ) : (
-            <form
-              id="storeInForm"
-              className="row row-cols-lg-auto g-3 align-items-center mt-3"
-              onSubmit={(e) => this.handleForm(e)}
+      <div className="row">
+        <Navbar onRouteChange={this.onRouteChange} />
+        {this.state.route === "barcode" ? (
+          <Barcode />
+        ) : (
+          <div className="App center">
+            <div
+              style={{
+                background: "white",
+                width: "auto",
+                padding: "50px",
+                borderRadius: "5px",
+              }}
             >
-              <div className="col-12">
-                <p>Please Enter PalletID to store In: </p>
-                <div className="input-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="palletInput"
-                    placeholder="Enter pallet Id"
-                    onChange={(e) =>
-                      this.setState({ palletId: e.target.value })
-                    }
-                    required
+              <h1>Store In : acknowledge</h1>
+              {this.state.loader ? (
+                <div className="center">
+                  <h5>Pallet {this.state.palletId} is being processed...</h5>
+                  <BallTriangle
+                    heigth="100"
+                    width="100"
+                    color="orange"
+                    ariaLabel="loading"
                   />
-                  <button type="submit" className="btn btn-success">
-                    Store Now
-                  </button>
                 </div>
-              </div>
-            </form>
-          )}
-        </div>
+              ) : (
+                <form
+                  id="storeInForm"
+                  className="row row-cols-lg-auto g-3 align-items-center mt-3"
+                  onSubmit={(e) => this.handleForm(e)}
+                >
+                  <div className="">
+                    <p>Please Enter PalletID to store In: </p>
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="palletInput"
+                        placeholder="Enter pallet Id"
+                        onChange={(e) =>
+                          this.setState({ palletId: e.target.value })
+                        }
+                        required
+                      />
+                      <button type="submit" className="btn btn-success">
+                        Store Now
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
