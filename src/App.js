@@ -4,7 +4,7 @@ import Barcode from "./components/Barcode/Barcode";
 
 const App = ()=>{
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/asrs">
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/barcode" element ={<Barcode />} />
