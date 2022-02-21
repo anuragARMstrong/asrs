@@ -1,0 +1,14 @@
+
+
+
+.height {
+  height: 100vh;
+  object-fit: fill;
+
+  
+}
+
+.text {
+  text-align: center;
+  margin-left: 2px;
+}

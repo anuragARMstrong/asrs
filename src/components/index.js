@@ -1,13 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import "./index.css";
 
-const Navbar = ({ onRouteChange }) => {
+const Navbar = () => {
   return (
-    <Router>
       <div
-        className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
-        style={{ width: "280px" }}
+        className="d-flex flex-column height flex-shrink-0 p-3 text-white bg-dark"
+        style={{ width: "280px", position:'fixed'}}
+        
       >
         <a
           href="/"
@@ -19,32 +19,32 @@ const Navbar = ({ onRouteChange }) => {
           <span className="fs-4">ASRS Resolver</span>
         </a>
         <hr />
-        <ul className="nav nav-pills flex-column mb-auto">
+        <ul className="nav nav-pills flex-column mb-auto text">
           <li className="nav-item">
             {/* <a href="#" className="nav-link active" aria-current="page"> */}
             {/* <svg className="bi me-2" width="16" height="16"> */}
             {/* <use href="/"></use> */}
-            <Link
+            <NavLink
               to="/"
-              onClick={() => onRouteChange("home")}
-              className="nav-link active"
+              // className="nav-link active"
+              className={({ isActive }) => isActive ? "nav-link active" : "nav-link text-white"}
             >
               Home
-            </Link>
+            </NavLink>
             {/* </svg> */}
             {/* </a> */}
           </li>
           <li>
-            <Link
+            <NavLink
               to="/barcode"
-              onClick={() => onRouteChange("barcode")}
-              className="nav-link text-white"
+              // className="nav-link text-white"
+              className={({ isActive }) => (isActive ? "nav-link active" : "nav-link text-white")}
             >
               Barcode
-            </Link>
+            </NavLink>
           </li>
-          <li>
-            <a href="#" className="nav-link text-white">
+          <li >
+            <a href="#" className="nav-link text-white text">
               <svg className="bi me-2" width="16" height="16">
                 <use href="#table"></use>
               </svg>
@@ -108,7 +108,6 @@ const Navbar = ({ onRouteChange }) => {
           </ul>
         </div>
       </div>
-    </Router>
   );
 };
 
