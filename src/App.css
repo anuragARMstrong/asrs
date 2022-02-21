@@ -43,3 +43,14 @@
     transform: rotate(360deg);
   }
 }
+
+.bg {
+  background-position: absolute;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  object-fit: cover;
+  background-size:100px ;
+  -webkit-background-size: cover;
+  -moz-background-size:cover ;
+  -moz-background-size: cover;
+}

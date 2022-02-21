@@ -1,0 +1,55 @@
+.heading {
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 40px;
+    top: 0%;
+    position: absolute;
+  }
+
+  .para {
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 150px;
+    top: 0%;
+    position: absolute;
+    margin-bottom: 800px;
+  }
+
+.line {
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 150px;
+    top: 0%;
+    position: absolute;
+  }
+
+  .load {
+    text-align: left;
+    margin-left: 250px;
+    margin-top: 250px;
+    top: 0%;
+    position: absolute;
+  
+  }
+
+  .barcode {
+      margin-top: 200px;
+      float: left;
+      padding-left: 200px;
+      
+      
+      
+  }
+
+  .bg {
+    
+    background-size:fill ;
+    overflow-y: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size:cover ;
+    -moz-background-size: cover;
+    width: fit-content;
+    height: fit-content;
+  }
+
+
