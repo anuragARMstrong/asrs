@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from '../src/components/Home';
 import Barcode from './components/Barcode';
 import SetConfiguration from './components/SetConfiguration';
@@ -7,7 +7,7 @@ import PalletRegister from './components/PalletRegister';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/barcode" element={<Barcode />} />
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/pallet-register" element={<PalletRegister />} />
         <Route path="/set-configuration" element={<SetConfiguration />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
