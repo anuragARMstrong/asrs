@@ -1,0 +1,90 @@
+.background {
+  padding-left: 300px;
+  padding-top: 20px;
+  background-color: #caf0fc;
+  height: 100vh;
+}
+
+.inbound_heading {
+  padding-left: 100px;
+}
+
+.start {
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.reset {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.container_1 {
+  display: block;
+  height: 25vh;
+  width: 75vw;
+  background-color: rgb(243, 141, 141);
+  margin-left: 50px;
+  padding-right: 20px;
+  margin-top: 20px;
+  position: fixed;
+  flex-wrap: wrap;
+}
+
+.container_2 {
+  display: block;
+  height: 25vh;
+  width: 75vw;
+  background-color: rgb(243, 141, 141);
+  margin-right: 20px;
+  margin-top: 30px;
+  position: fixed;
+  flex-wrap: wrap;
+}
+
+.barcode {
+  margin-left: 520px;
+  position: fixed;
+}
+
+.pallet {
+  position: fixed;
+}
+
+.pallet_id {
+  margin-top: 60px;
+  margin-left: 10px;
+  position: fixed;
+}
+
+.cartons {
+  margin-top: 40px;
+  margin-left: 5px;
+}
+
+.barcodes {
+  margin-top: -35px;
+  margin-left: 600px;
+  margin-bottom: 60px;
+}
+
+.qrcodes {
+  margin-top: 60px;
+  margin-left: 600px;
+  position: fixed;
+}
+
+.container_3 {
+  background-color: aqua;
+  margin-top: 180px;
+  height: 50vh;
+  width: 75vw;
+  overflow-y: scroll;
+  padding-bottom: 300px;
+}
+
+.barcode_spaces {
+  margin-top: 580px;
+  margin-right: 390px;
+  margin-left: -550px;
+}

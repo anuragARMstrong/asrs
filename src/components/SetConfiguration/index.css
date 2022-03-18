@@ -1,0 +1,17 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+.app-bg-container {
+  width: 80%;
+  background-color: #caf0fc;
+  border: 2px solid red;
+  margin-left: 20%;
+}
+.config-label-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 900px;
+  padding-bottom: 10px;
+}

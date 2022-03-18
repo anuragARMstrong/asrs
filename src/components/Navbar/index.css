@@ -1,13 +1,10 @@
-
-
 .height {
   height: 100vh;
   object-fit: fill;
-
-  
 }
 
 .text {
-  text-align: center;
-  margin-left: 2px;
+  text-align: left;
+  margin-left: 10px;
+  padding-left: 15px;
 }

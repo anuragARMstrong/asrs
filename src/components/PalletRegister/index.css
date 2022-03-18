@@ -1,0 +1,73 @@
+/* .pallet-register-container {
+  width: 100vw;
+  margin-left: 20%;
+  margin-bottom: 60px;
+}
+.palletReg-bg-container {
+  background: '#caf0fc';
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+  /* border: 2px solid red; */
+
+.progress-wrapper {
+  width: 400px;
+  height: 42px;
+  background-color: #f7f7f7;
+  outline: 1px solid gainsboro;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.progress-wrapper .progress {
+  width: 20%;
+  height: 42px;
+  background-color: royalblue;
+  transition: width 0.3s cubic-bezier(0, 0.96, 0, 0.96);
+}
+.pro-container {
+  margin-top: 24px;
+}
+
+.progress-container {
+  height: 50px;
+  margin: 12px;
+  margin-top: 56px;
+}
+.table-container {
+  margin-top: 58px;
+  width: 100%;
+  margin-bottom: 250px;
+  overflow-wrap: anywhere;
+}
+.th,
+td {
+  text-align: center;
+}
+.table-head-container {
+  background-color: #99f0bc;
+  text-align: center;
+}
+.table-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.download {
+  margin-left: 950px;
+}
+
+.btn-container {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin-left: 32px;
+}
+.label-text {
+  font-size: 16px;
+  font-weight: bold;
+}
