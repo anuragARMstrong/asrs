@@ -71,15 +71,13 @@
 .home-heading {
   padding-top: 30px;
   text-align: left;
-  /* margin-left: 150px;
-  margin-top: 0px;
-  top: 0%;
-  position: fixed; */
+  margin-left: 50px;
 }
 
 .home-label-para {
   font-size: 20px;
   color: red;
+  margin-left: 45px;
 }
 .processed {
   padding-top: 50px;

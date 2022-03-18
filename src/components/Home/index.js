@@ -18,9 +18,7 @@ class Home extends Component {
   }
 
   validateURL = url => {
-    var res = url.match(
-      '^(https?:\\/\\/)?' + '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + '((\\d{1,3}\\.){3}\\d{1,3}))'
-    );
+    var res = url.match('^(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))');
     return res !== null;
   };
 
@@ -43,7 +41,7 @@ class Home extends Component {
           const locationData = await this.callTheApi(getLocationURL, 'GET', {}, headers);
 
           // call the storeIn ack api
-          const ackLocationURL = `${customConfigUrl}/${this.state.palletId}?location=${locationData[0].locationid}`;
+          const ackLocationURL = `${customConfigUrl}/asrs/api/storein/${this.state.palletId}?location=${locationData[0].locationid}`;
           const ackData = await this.callTheApi(ackLocationURL, 'PATCH', {}, headers);
 
           if (ackData) {
