@@ -27,11 +27,8 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/InBoundSimulation"
-            className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link text-white')}
-          >
-            InBound Simulation
+          <NavLink to="/simulate" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link text-white')}>
+            ASRS Simulator
           </NavLink>
         </li>
         <li>

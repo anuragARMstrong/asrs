@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/barcode" element={<Barcode />} />
-        <Route path="/InboundSimulation" element={<InBoundSimulation />} />
+        <Route path="/simulate" element={<InBoundSimulation />} />
         <Route path="/pallet-register" element={<PalletRegister />} />
         <Route path="/set-configuration" element={<SetConfiguration />} />
       </Routes>
