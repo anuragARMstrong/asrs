@@ -40,6 +40,10 @@ const Operations = {
       username: 'admin',
       password: 'admin'
     }
+  },
+  GET_PALLET_DETAILS: {
+    url: '/asrs/api/pallet/pkgs/{{palletBarcode}}',
+    method: 'GET'
   }
 };
 

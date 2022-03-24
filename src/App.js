@@ -4,6 +4,7 @@ import Barcode from './components/Barcode';
 import SetConfiguration from './components/SetConfiguration';
 import InBoundSimulation from './components/InboundSimulation';
 import PalletRegister from './components/PalletRegister';
+import PalletDetails from './components/PalletDetails';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/barcode" element={<Barcode />} />
         <Route path="/simulate" element={<InBoundSimulation />} />
         <Route path="/pallet-register" element={<PalletRegister />} />
+        <Route path="/pallet-details" element={<PalletDetails />} />
         <Route path="/set-configuration" element={<SetConfiguration />} />
       </Routes>
     </HashRouter>

@@ -12,7 +12,11 @@ const Navbar = () => {
         <svg className="bi me-2" width="40" height="32">
           <use href="#bootstrap"></use>
         </svg>
-        <span className="fs-4">ASRS Resolver</span>
+        <span className="fs-4">
+          {' '}
+          <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo" width={35} height={35} />
+          ASRS Simulator
+        </span>
       </a>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto text">
@@ -37,6 +41,14 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link text-white')}
           >
             Pallet Register
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/pallet-details"
+            className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link text-white')}
+          >
+            Pallet Details
           </NavLink>
         </li>
         <li>
